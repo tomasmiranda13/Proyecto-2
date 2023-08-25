@@ -37,6 +37,24 @@
           "spd": "045"
         }
       ]
+    },
+    {
+      "id": "003",
+      "name": "Squirtle",
+      "type1": "Water",
+      "weight": "9.0",
+      "height": "0.7",
+      "moves": "Chlorophy Overgrow",
+      "base-states": [
+        {
+          "hp": "045",
+          "atk": "049",
+          "def": "045",
+          "satk": "065",
+          "sdef": "065",
+          "spd": "045"
+        }
+      ]
     }
   ]
 }
