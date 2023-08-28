@@ -18,16 +18,14 @@
       "label3": "Moves",
       "description": " There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "045",
-          "atk": "049",
-          "def": "049",
-          "satk": "065",
-          "sdef": "065",
-          "spd": "045"
-        }
-      ]
+      "base_stats": {
+        "hp": "045",
+        "atk": "049",
+        "def": "049",
+        "satk": "065",
+        "sdef": "065",
+        "spd": "045"
+      }
     },
     {
       "id": "004",
@@ -46,16 +44,14 @@
       "label3": "Moves",
       "description": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "039",
-          "atk": "052",
-          "def": "043",
-          "satk": "060",
-          "sdef": "050",
-          "spd": "065"
-        }
-      ]
+      "base_stats": {
+        "hp": "039",
+        "atk": "052",
+        "def": "043",
+        "satk": "060",
+        "sdef": "050",
+        "spd": "065"
+      }
     },
     {
       "id": "007",
@@ -74,16 +70,14 @@
       "label3": "Moves",
       "description": "When it retracts its long neck into its shell, it squirts out water with vigorous force. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "044",
-          "atk": "048",
-          "def": "065",
-          "satk": "050",
-          "sdef": "064",
-          "spd": "043"
-        }
-      ]
+      "base_stats": {
+        "hp": "044",
+        "atk": "048",
+        "def": "065",
+        "satk": "050",
+        "sdef": "064",
+        "spd": "043"
+      }
     },
     {
       "id": "012",
@@ -103,16 +97,14 @@
       "label3": "Moves",
       "description": "In battle, it flaps its wings at great speed to release highly toxic dust into the air. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "060",
-          "atk": "045",
-          "def": "050",
-          "satk": "090",
-          "sdef": "080",
-          "spd": "070"
-        }
-      ]
+      "base_stats": {
+        "hp": "060",
+        "atk": "045",
+        "def": "050",
+        "satk": "090",
+        "sdef": "080",
+        "spd": "070"
+      }
     },
     {
       "id": "025",
@@ -131,16 +123,14 @@
       "label3": "Moves",
       "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "035",
-          "atk": "055",
-          "def": "040",
-          "satk": "050",
-          "sdef": "050",
-          "spd": "090"
-        }
-      ]
+      "base_stats": {
+        "hp": "035",
+        "atk": "055",
+        "def": "040",
+        "satk": "050",
+        "sdef": "050",
+        "spd": "090"
+      }
     },
     {
       "id": "092",
@@ -159,16 +149,14 @@
       "label3": "Moves",
       "description": "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "030",
-          "atk": "035",
-          "def": "030",
-          "satk": "100",
-          "sdef": "035",
-          "spd": "080"
-        }
-      ]
+      "base_stats": {
+        "hp": "030",
+        "atk": "035",
+        "def": "030",
+        "satk": "100",
+        "sdef": "035",
+        "spd": "080"
+      }
     },
     {
       "id": "132",
@@ -187,16 +175,14 @@
       "label3": "Moves",
       "description": "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "048",
-          "atk": "048",
-          "def": "048",
-          "satk": "048",
-          "sdef": "048",
-          "spd": "048"
-        }
-      ]
+      "base_stats": {
+        "hp": "048",
+        "atk": "048",
+        "def": "048",
+        "satk": "048",
+        "sdef": "048",
+        "spd": "048"
+      }
     },
     {
       "id": "152",
@@ -214,16 +200,14 @@
       "label3": "Moves",
       "description": "When viewed through a microscope, this Pokémon's short, fine, delicate hair can be seen. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "100",
-          "atk": "100",
-          "def": "100",
-          "satk": "100",
-          "sdef": "100",
-          "spd": "100"
-        }
-      ]
+      "base_stats": {
+        "hp": "100",
+        "atk": "100",
+        "def": "100",
+        "satk": "100",
+        "sdef": "100",
+        "spd": "100"
+      }
     },
     {
       "id": "304",
@@ -243,16 +227,14 @@
       "label3": "Moves",
       "description": "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body. ",
       "title2": "Base Stats",
-      "base-stats": [
-        {
-          "hp": "050",
-          "atk": "070",
-          "def": "100",
-          "satk": "040",
-          "sdef": "040",
-          "spd": "030"
-        }
-      ]
+      "base_stats": {
+        "hp": "050",
+        "atk": "070",
+        "def": "100",
+        "satk": "040",
+        "sdef": "040",
+        "spd": "030"
+      }
     }
   ]
 }
