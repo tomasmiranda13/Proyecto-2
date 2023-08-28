@@ -2,17 +2,27 @@
   "pokemones": [
     {
       "id": "001",
+      "tag": ".icons/tag,svg",
       "name": "Bulbasaur",
+      "image": "/images/Bulbasaur.svg",
       "type1": "Grass",
       "type2": "Poison",
-      "weight": "6.9",
-      "height": "0.7",
-      "moves": "Chlorophy Overgrow",
-      "base-states": [
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "6.9 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.7 m",
+      "label2": "Height",
+      "moves": "Chlorophyll Overgrow",
+      "label3": "Moves",
+      "description": " There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger. ",
+      "title2": "Base Stats",
+      "base-stats": [
         {
           "hp": "045",
           "atk": "049",
-          "def": "045",
+          "def": "049",
           "satk": "065",
           "sdef": "065",
           "spd": "045"
@@ -20,39 +30,227 @@
       ]
     },
     {
-      "id": "002",
+      "id": "004",
       "name": "Charmander",
+      "image": "/images/Charmander.svg",
       "type1": "Fire",
-      "type2": "About",
-      "weight": "6.9",
-      "height": "0.7",
-      "moves": "Chlorophy Overgrow",
-      "base-states": [
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "8.5 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.6 m",
+      "label2": "Height",
+      "move1": "Mega-Punch",
+      "move2": "Fire-Punch",
+      "label3": "Moves",
+      "description": "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail. ",
+      "title2": "Base Stats",
+      "base-stats": [
         {
-          "hp": "045",
-          "atk": "049",
-          "def": "045",
-          "satk": "065",
-          "sdef": "065",
-          "spd": "045"
+          "hp": "039",
+          "atk": "052",
+          "def": "043",
+          "satk": "060",
+          "sdef": "050",
+          "spd": "065"
         }
       ]
     },
     {
-      "id": "003",
+      "id": "007",
       "name": "Squirtle",
+      "image": "/images/Squirtle.svg",
       "type1": "Water",
-      "weight": "9.0",
-      "height": "0.7",
-      "moves": "Chlorophy Overgrow",
-      "base-states": [
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "9.0 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.5 m",
+      "label2": "Height",
+      "move1": "Torrent",
+      "move2": "Rain-Dish",
+      "label3": "Moves",
+      "description": "When it retracts its long neck into its shell, it squirts out water with vigorous force. ",
+      "title2": "Base Stats",
+      "base-stats": [
         {
-          "hp": "045",
-          "atk": "049",
-          "def": "045",
-          "satk": "065",
-          "sdef": "065",
-          "spd": "045"
+          "hp": "044",
+          "atk": "048",
+          "def": "065",
+          "satk": "050",
+          "sdef": "064",
+          "spd": "043"
+        }
+      ]
+    },
+    {
+      "id": "012",
+      "name": "Butterfree",
+      "image": "/images/Butterfree.svg",
+      "type1": "Bug",
+      "type2": "Flying",
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "32.0 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "1.1 m",
+      "label2": "Height",
+      "move1": "Compound-Eyes",
+      "move2": "Tinted-Lens",
+      "label3": "Moves",
+      "description": "In battle, it flaps its wings at great speed to release highly toxic dust into the air. ",
+      "title2": "Base Stats",
+      "base-stats": [
+        {
+          "hp": "060",
+          "atk": "045",
+          "def": "050",
+          "satk": "090",
+          "sdef": "080",
+          "spd": "070"
+        }
+      ]
+    },
+    {
+      "id": "025",
+      "name": "Pikachu",
+      "image": "/images/Pikachu.svg",
+      "type1": "Electric",
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "6.0 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.4 m",
+      "label2": "Height",
+      "move1": "Mega-Punch",
+      "move2": "Pay-Day",
+      "label3": "Moves",
+      "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy. ",
+      "title2": "Base Stats",
+      "base-stats": [
+        {
+          "hp": "035",
+          "atk": "055",
+          "def": "040",
+          "satk": "050",
+          "sdef": "050",
+          "spd": "090"
+        }
+      ]
+    },
+    {
+      "id": "092",
+      "name": "Gastly",
+      "image": "/images/Gastly.svg",
+      "type1": "Ghost",
+      "type2": "Poison",
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "0.1 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "1.3 m",
+      "label2": "Height",
+      "move1": "Levitate",
+      "label3": "Moves",
+      "description": "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison. ",
+      "title2": "Base Stats",
+      "base-stats": [
+        {
+          "hp": "030",
+          "atk": "035",
+          "def": "030",
+          "satk": "100",
+          "sdef": "035",
+          "spd": "080"
+        }
+      ]
+    },
+    {
+      "id": "132",
+      "name": "Ditto",
+      "image": "/images/Ditto.svg",
+      "type1": "Normal",
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "4.0 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.3 m",
+      "label2": "Height",
+      "move1": "Limber",
+      "move2": "Imposter",
+      "label3": "Moves",
+      "description": "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes. ",
+      "title2": "Base Stats",
+      "base-stats": [
+        {
+          "hp": "048",
+          "atk": "048",
+          "def": "048",
+          "satk": "048",
+          "sdef": "048",
+          "spd": "048"
+        }
+      ]
+    },
+    {
+      "id": "152",
+      "name": "Mew",
+      "image": "/images/Mew.svg",
+      "type1": "Psychic",
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "4.0 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.4 m",
+      "label2": "Height",
+      "move1": "Synchronize",
+      "label3": "Moves",
+      "description": "When viewed through a microscope, this Pokémon's short, fine, delicate hair can be seen. ",
+      "title2": "Base Stats",
+      "base-stats": [
+        {
+          "hp": "100",
+          "atk": "100",
+          "def": "100",
+          "satk": "100",
+          "sdef": "100",
+          "spd": "100"
+        }
+      ]
+    },
+    {
+      "id": "304",
+      "name": "Aron",
+      "image": "/images/Aron.svg",
+      "type1": "Steel",
+      "type2": "Rock",
+      "title1": "About",
+      "icon1": "./icons/weight.svg",
+      "weight": "60.0 kg",
+      "label1": "Weight",
+      "icon2": "./icons/straighten/svg",
+      "height": "0.4 m",
+      "label2": "Height",
+      "move1": "Sturdy",
+      "move2": "Rock-Head",
+      "label3": "Moves",
+      "description": "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body. ",
+      "title2": "Base Stats",
+      "base-stats": [
+        {
+          "hp": "050",
+          "atk": "070",
+          "def": "100",
+          "satk": "040",
+          "sdef": "040",
+          "spd": "030"
         }
       ]
     }
