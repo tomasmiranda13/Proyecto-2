@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PokemonDetail from "../components/PokemonDetail";
 
+
 function PokemonPage() {
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [pokemones, setPokemones] = useState(null);
   useEffect(() => {
     fetch("http://localhost:3000/pokemones")
