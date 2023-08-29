@@ -1,12 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
 
-function PokemonDetail({ data: { name, type } }) {
+function PokemonDetail({
+  data: {
+    name,
+    image,
+    type1,
+    type2,
+    weight,
+    height,
+    ability,
+    description,
+    base_stats,
+  },
+}) {
   return (
     <div>
       <div className="wrapper">
         <div pokemon-img>
-          <img src={img} alt="" />
+          <img src={image} alt="" />
         </div>
         <div className="pokemon-detail">
           <div className="types">
@@ -37,10 +49,16 @@ function PokemonDetail({ data: { name, type } }) {
             <h2>Base Stats</h2>
             <div className="stats">
               <div className="stats-value">
-                <span>{hp}</span>;<span>{atk}</span>;<span>{def}</span>;
-                <span>{satk}</span>;<span>{sdef}</span>;<span>{spd}</span>;
+                {base_stats.map((stat) => {
+                  <span>{stat.hp}</span>;
+                  <span>{stat.atk}</span>;
+                  <span>{stat.def}</span>;
+                  <span>{stat.satk}</span>;
+                  <span>{stat.sdef}</span>;
+                  <span>{stat.spd}</span>;
+                })}
               </div>
-
+              z
               <div className="stats-name">
                 <span>HP</span>
                 <span>ATK </span>
