@@ -69,15 +69,53 @@ function PokemonDetail({
                     id="file"
                     max="100"
                     value={base_stats.hp}
-                  >
-                    70%
-                  </progress>
+                  ></progress>
                 </span>
-                <span>{base_stats.atk}</span>
-                <span>{base_stats.def}</span>
-                <span>{base_stats.satk}</span>
-                <span>{base_stats.sdef}</span>
-                <span>{base_stats.spd}</span>
+                <span>
+                  {base_stats.atk}{" "}
+                  <progress
+                    className="progress-bar"
+                    id="file"
+                    max="100"
+                    value={base_stats.atk}
+                  ></progress>
+                </span>
+                <span>
+                  {base_stats.def}{" "}
+                  <progress
+                    className="progress-bar"
+                    id="file"
+                    max="100"
+                    value={base_stats.def}
+                  ></progress>
+                </span>
+                <span>
+                  {base_stats.satk}{" "}
+                  <progress
+                    className="progress-bar"
+                    id="file"
+                    max="100"
+                    value={base_stats.satk}
+                  ></progress>
+                </span>
+                <span>
+                  {base_stats.sdef}{" "}
+                  <progress
+                    className="progress-bar"
+                    id="file"
+                    max="100"
+                    value={base_stats.sdef}
+                  ></progress>
+                </span>
+                <span>
+                  {base_stats.spd}{" "}
+                  <progress
+                    className="progress-bar"
+                    id="file"
+                    max="100"
+                    value={base_stats.spd}
+                  ></progress>
+                </span>
               </div>
 
               <div className="stats-name">
