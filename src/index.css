@@ -1,31 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-body{
-    font-family: 'Poppins', sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  font-size: 18px;
 }
 
-.home-wrapper{
-    width: 100%;
-    min-height: 1500px;
-    background-color: #DC0A2D;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-.pokeball-logo{
-    filter: invert(1);
-    width: 25px;
-    height: 25px;
+.home-wrapper {
+  width: 100%;
+  min-height: 1500px;
+  background-color: #dc0a2d;
 }
 
-.home-wrapper h1{
-    color:  #FFFFFF;
-    font-size: 24px;
+.pokeball-logo {
+  filter: invert(1);
+  width: 25px;
+  height: 25px;
 }
 
-.home-wrapper header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem;
-    gap: 0.5rem;
+.home-wrapper h1 {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.home-wrapper header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
 }
