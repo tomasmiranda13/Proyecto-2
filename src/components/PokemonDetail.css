@@ -1,11 +1,41 @@
 .wrapper {
   background-color: #dc0a2d;
-  height: 900px;
+  /* background-image:  url(./icons/pokeball.svg); */
+  background-repeat: no-repeat;
+  padding: 5px;
+}
+.wrapper header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding-top: 10px;
+}
+#arrow-back {
+  filter: invert(1);
+}
+.pokemon-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pokemon-img {
+  position: relative;
+  left: 70px;
+  top: 60px;
+  width: 250px;
 }
 .types {
   display: flex;
   gap: 20px;
   margin-top: 30px;
+}
+.types div {
+  border-radius: 50px;
+  background-color: #dc0a2d;
+  padding: 4px 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
 }
 .pokemon-detail {
   display: flex;
@@ -14,7 +44,7 @@
   align-items: center;
   gap: 10px;
   background-color: var(--grayscale-background, #efefef);
-  margin: 10px;
+  margin: 5px;
   border-radius: 10px;
   padding: 20px;
 }
@@ -26,24 +56,38 @@
   flex-direction: column;
   align-items: center;
 }
+.about-type {
+  font-size: 13px;
+  font-weight: 400;
+}
 .about {
   display: flex;
   flex-direction: row;
-  width: 312px;
+  width: 360px;
   height: 40px;
   justify-content: space-between;
-  margin: 5px;
+  margin: 10px;
 }
 .about-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 4px;
+  width: 100px;
+}
+.about-value {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.about-value img {
+  width: 20px;
 }
 .line {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  padding: 0px 40px;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  padding: 0px 20px;
 }
 .description {
   text-align: center;
@@ -71,4 +115,23 @@
   align-items: flex-start;
   gap: 5px;
   padding: 10px;
+}
+.description {
+  text-align: left;
+}
+.progress-bar {
+  margin-left: 4px;
+  width: 200px;
+}
+
+.id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+}
+.id img {
+  width: 14px;
+  filter: invert(1);
 }

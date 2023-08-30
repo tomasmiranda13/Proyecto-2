@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
+import { Link } from "react-router-dom";
 
 function PokemonDetail({
   data: {
+    id,
     name,
     image,
     type1,
     type2,
     weight,
     height,
-    ability,
+    moves,
     description,
     base_stats,
   },
@@ -17,28 +19,39 @@ function PokemonDetail({
   return (
     <div>
       <div className="wrapper">
-        <div pokemon-img>
-          <img src={image} alt="" />
-        </div>
+        <header>
+          <div className="pokemon-name">
+            <img id="arrow-back" src="./icons/arrow_back.svg" alt="" />
+            <h1>{name}</h1>
+          </div>
+          <div className="id">
+            <img src="./icons/tag.svg" alt="" />
+            <p>{id}</p>
+          </div>
+        </header>
+        <img className="pokemon-img" src={image} alt="" />
         <div className="pokemon-detail">
           <div className="types">
-            <button>{type1}</button>
-            <button>{type2}</button>
+            <div>{type1}</div>
+            <div>{type2}</div>
           </div>
           <div className="about-wrapper">
             <h2>About</h2>
             <div className="about">
               <div className="about-div">
-                <span>{weight}</span>
-                <span>Weight</span>
+                <span className="about-value">
+                  <img src="./icons/weight.svg" alt="" />
+                  {weight}
+                </span>
+                <span className="about-type">Weight</span>
               </div>
               <div className="about-div line">
-                <span className="">{height}</span>
-                <span>Height</span>
+                <span className="about-value">{height}</span>
+                <span className="about-type">Height</span>
               </div>
               <div className="about-div">
-                <span>{ability}</span>
-                <span>Moves</span>
+                <span className="about-value">{moves}</span>
+                <span className="about-type">Moves</span>
               </div>
             </div>
           </div>
@@ -49,16 +62,24 @@ function PokemonDetail({
             <h2>Base Stats</h2>
             <div className="stats">
               <div className="stats-value">
-                {base_stats.map((stat) => {
-                  <span>{stat.hp}</span>;
-                  <span>{stat.atk}</span>;
-                  <span>{stat.def}</span>;
-                  <span>{stat.satk}</span>;
-                  <span>{stat.sdef}</span>;
-                  <span>{stat.spd}</span>;
-                })}
+                <span>
+                  {base_stats.hp}
+                  <progress
+                    className="progress-bar"
+                    id="file"
+                    max="100"
+                    value={base_stats.hp}
+                  >
+                    70%
+                  </progress>
+                </span>
+                <span>{base_stats.atk}</span>
+                <span>{base_stats.def}</span>
+                <span>{base_stats.satk}</span>
+                <span>{base_stats.sdef}</span>
+                <span>{base_stats.spd}</span>
               </div>
-              z
+
               <div className="stats-name">
                 <span>HP</span>
                 <span>ATK </span>

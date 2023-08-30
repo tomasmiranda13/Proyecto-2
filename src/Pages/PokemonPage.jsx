@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PokemonDetail from "../components/PokemonDetail";
 
-
 function PokemonPage() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
