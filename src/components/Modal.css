@@ -1,0 +1,65 @@
+.modal-wrapper{
+    position: fixed;
+    top: 3rem;
+    left: 21rem;
+}
+
+#myBtn{
+    background-color: #FFFFFF ;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    color: #DC0A2D;
+    cursor: pointer;
+}
+
+.input-pokemon[type="radio"]:checked {
+    accent-color:  #DC0A2D;
+}
+
+#myModal {
+    position:fixed;
+    right: 1rem;
+    width: 25%;
+    height: 13%;
+    border-radius: 10px;
+    background-color: #DC0A2D;
+}
+
+.modal-container p {
+    color: #FFFFFF;
+    font-size: 10px ;
+    padding: 0.4rem;
+    margin: 5% 15%;
+}
+
+.modal-select {
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    width: 90%;
+    min-height: 57px;
+    padding: 10px 17px;
+    margin: 8% auto;
+    line-height: 1rem;
+    font-size: 12px;
+}
+
+.select-box{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.select-box input {
+    width: 0.7rem;
+    border: 2px solid #DC0A2D;
+}
+
+label{
+    font-size: 8.5px;
+    color: #212121;
+}
