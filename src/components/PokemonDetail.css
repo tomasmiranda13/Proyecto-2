@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #dc0a2d;
+  background-color: currentColor;
   /* background-image:  url(./icons/pokeball.svg); */
   background-repeat: no-repeat;
   padding: 5px;
@@ -31,11 +31,13 @@
 }
 .types div {
   border-radius: 50px;
-  background-color: #dc0a2d;
+  background-color: currentColor;
   padding: 4px 8px;
-  color: white;
   font-size: 13px;
   font-weight: 700;
+}
+.types span {
+  color: white;
 }
 .pokemon-detail {
   display: flex;
