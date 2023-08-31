@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../public/icons/pokeball.svg";
 import Modal from "../components/Modal";
+import SearchBar from "../components/Searchbar";
 
 function Home() {
   return (
@@ -10,7 +11,9 @@ function Home() {
           <img className="pokeball-logo" src={Logo} alt="Logo pokeball" />
           <h1>Pokédex</h1>
         </header>
-        <Modal />
+        <div className="flex">
+       <SearchBar/>
+        <Modal /></div>
 
         <main></main>
       </div>

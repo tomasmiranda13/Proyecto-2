@@ -1,9 +1,15 @@
 import React from 'react'
+import './SearchBar.css'
+import { AiOutlineSearch } from "react-icons/ai#AiOutlineSearch";
 
-function Searchbar() {
-  return (
-    <div>Searchbar</div>
+function SearchBar() {
+  return ( <>
+    <div className="input-wrapper">
+    <AiOutlineSearch color="red" fontSize={'15px' } />
+    <input type="text" placeholder="Search" />
+   
+  </div></>
   )
 }
 
-export default Searchbar
+export default SearchBar
