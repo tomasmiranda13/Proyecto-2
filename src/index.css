@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -11,10 +11,8 @@ h2 {
   font-size: 18px;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
 
+/* 
 .home-wrapper {
   width: 100%;
   min-height: 1500px;
@@ -39,3 +37,4 @@ body {
   padding: 1rem;
   gap: 0.5rem;
 }
+ */

@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../public/icons/pokeball.svg";
 import Modal from "../components/Modal";
 import SearchBar from "../components/Searchbar";
+import './Home.css'
 
 function Home() {
   return (
