@@ -1,23 +1,39 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-function PokemonDetail({
-  data: {
-    id,
-    name,
-    image,
-    type1,
-    type2,
-    weight,
-    height,
-    moves,
-    description,
-    base_stats,
-  },
-}) {
+function PokemonDetail() {
+  const { id } = useParams();
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [pokemon, setPokemon] = useState(null);
+  const { name, image, types, weight, height, moves, description, base_stats } =
+    pokemon || {};
+  useEffect(() => {
+    fetch("http://localhost:3000/pokemones/" + id)
+      .then((response) => {
+        if (!response.ok) {
+          setError(
+            "No se han encontrado pokemones o hay algun error, intente recargar la pagina"
+          );
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        setPokemon(data);
+      })
+      .catch((error) => {
+        setError("Error del lado del servidor");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+  console.log(pokemon);
+  if (!pokemon) return <h1>loading</h1>;
   return (
-    <div>
+    <div className={types[0].toLowerCase()}>
       <div className="wrapper">
         <header>
           <div className="pokemon-name">
@@ -32,8 +48,11 @@ function PokemonDetail({
         <img className="pokemon-img" src={image} alt="" />
         <div className="pokemon-detail">
           <div className="types">
-            <div>{type1}</div>
-            <div>{type2}</div>
+            {types.map((type) => (
+              <div>
+                <span>{type}</span>
+              </div>
+            ))}
           </div>
           <div className="about-wrapper">
             <h2>About</h2>

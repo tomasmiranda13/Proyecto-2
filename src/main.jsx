@@ -1,25 +1,26 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import PokemonPage from './Pages/PokemonPage';
-import { RouterProvider, createBrowserRouter ,} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import PokemonPage from "./Pages/PokemonPage";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import PokemonDetail from "./components/PokemonDetail";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PokemonPage/>,
+    element: <Home />,
     /* errorElement: <ErrorPage /> */
-    children: [
+  },
   {
-    path: "/home/pokemon-details/:id",
-    element: <PokemonPage/>,
+    path: "/pokemon-details/:id",
+    element: <PokemonDetail />,
     /* errorElement: <ErrorPage />, */
-    
-  }],
-}]);
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <RouterProvider router={router}/>
-  </>,
-)
+    <RouterProvider router={router} />
+  </>
+);
