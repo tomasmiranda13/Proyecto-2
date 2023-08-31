@@ -39,13 +39,11 @@ body {
   padding: 1rem;
   gap: 0.5rem;
 }
-.fire {
-  color: red;
-}
 
-.electric {
-  color: #ffee11;
-}
-.grass {
-  color: green;
+
+.flex{
+  padding: 0 10px;
+  display: flex;
+  gap:  15px
+  ;
 }
