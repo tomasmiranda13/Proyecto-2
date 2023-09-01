@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function PokemonDetail(props) {
   const { id } = useParams();
