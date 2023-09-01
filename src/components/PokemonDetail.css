@@ -31,11 +31,9 @@
 .types div {
   border-radius: 50px;
   padding: 4px 8px;
+  color: white;
   font-size: 13px;
   font-weight: 700;
-}
-.types span {
-  color: white;
 }
 .pokemon-detail {
   display: flex;
