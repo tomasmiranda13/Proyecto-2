@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
 import { Link, useParams } from "react-router-dom";
 
-function PokemonDetail() {
+function PokemonDetail(props) {
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +37,7 @@ function PokemonDetail() {
       <div className="wrapper">
         <header>
           <div className="pokemon-name">
-            <img id="arrow-back" src="./icons/arrow_back.svg" alt="" />
+            <img id="arrow-back" src="" alt="" />
             <h1>{name}</h1>
           </div>
           <div className="id">
