@@ -17,7 +17,7 @@ body {
 
 .home-wrapper {
   width: 100%;
-  min-height: 1500px;
+  min-height: 900px;
   background-color: #dc0a2d;
 }
 
@@ -45,5 +45,5 @@ body {
   padding: 0 10px;
   display: flex;
   gap:  15px
-  ;
+;
 }

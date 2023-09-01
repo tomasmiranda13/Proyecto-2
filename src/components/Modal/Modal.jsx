@@ -2,11 +2,7 @@ import React from "react";
 import "./Modal.css";
 import { useState, useEffect } from "react";
 
-function Modal({ modalActive, setModalActive, selectedOption, setSelectedOption}) {
-  const [visible, setVisible] = useState(false);
-  const [pokemones, setPokemones] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+function Modal({ modalActive, setModalActive, selectedOption, setSelectedOption, pokemones, onSort}) {
 
   const handleCloseModal = () => {
     setModalActive(false);
@@ -18,27 +14,8 @@ function Modal({ modalActive, setModalActive, selectedOption, setSelectedOption}
     setSelectedOption(newOption)
     console.log("selectedOption:", event.target.value);
   };
-  useEffect(() => {
-    fetch("http://localhost:3000/pokemones")
-      .then((response) => {
-        if (!response.ok) {
-          setError(
-            "No se han encontrado pokemones o hay algun error, intente recargar la pagina"
-          );
-        } else {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        setPokemones(data);
-      })
-      .catch((error) => {
-        setError("Error del lado del servidor");
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
+
+
 
   const handleSortByNumber = () => {
     const sortedPokemones = [...pokemones];
@@ -47,7 +24,7 @@ function Modal({ modalActive, setModalActive, selectedOption, setSelectedOption}
       const idB = parseInt(b.id);
       return idA - idB;
     });
-    setPokemones(sortedPokemones);
+    onSort(sortedPokemones);
     handleCloseModal();
     console.log(sortedPokemones);
   };
@@ -59,7 +36,7 @@ function Modal({ modalActive, setModalActive, selectedOption, setSelectedOption}
       const nameB = b.name.toLowerCase();
       return nameA.localeCompare(nameB);
     });
-    setPokemones(sortedPokemones);
+    onSort(sortedPokemones);
     handleCloseModal();
     console.log(sortedPokemones);
   };
@@ -67,8 +44,6 @@ function Modal({ modalActive, setModalActive, selectedOption, setSelectedOption}
   return (
     <>
       <div className="modal-wrapper">
-        {console.log("Renderizando modal", visible)}
-        
         {modalActive && (
             <div id="myModal">
               <div className="modal-box">
