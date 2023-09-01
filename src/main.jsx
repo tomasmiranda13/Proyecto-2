@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import PokemonPage from './Pages/PokemonPage';
 import { RouterProvider, createBrowserRouter ,} from "react-router-dom";
+import Home from './Pages/Home'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PokemonPage/>,
+    element: <Home/>,
     /* errorElement: <ErrorPage /> */
     children: [
   {
@@ -21,5 +22,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <RouterProvider router={router}/>
-  </>,
+  </>
 )
