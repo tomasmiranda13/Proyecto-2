@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../public/icons/pokeball.svg";
-import Modal from "../components/Modal";
+import Modal from "../components/Modal/Modal";
 import SearchBar from "../components/Searchbar";
-import './Home.css'
+import "./Home.css";
 
 function Home() {
   const [error, setError] = useState(null);
@@ -45,18 +45,17 @@ function Home() {
           <h1>Pokédex</h1>
         </header>
         <div className="flex">
-       <SearchBar handleSearch={handleSearch}/>
-        <Modal /></div>
-        {foundPokemon.length > 0 && (
-
-foundPokemon.map(pokemon => <div key={pokemon.id}>
-  
-  <h2>Información del Pokémon</h2>
-  <p>ID: {pokemon.id}</p>
-  <p>Nombre: {pokemon.name}</p>
-  
-</div>)
-)} 
+          <SearchBar handleSearch={handleSearch} />
+          <Modal />
+        </div>
+        {foundPokemon.length > 0 &&
+          foundPokemon.map((pokemon) => (
+            <div key={pokemon.id}>
+              <h2>Información del Pokémon</h2>
+              <p>ID: {pokemon.id}</p>
+              <p>Nombre: {pokemon.name}</p>
+            </div>
+          ))}
 
         <main></main>
       </div>
