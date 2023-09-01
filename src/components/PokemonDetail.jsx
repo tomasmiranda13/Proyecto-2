@@ -76,7 +76,7 @@ function PokemonDetail() {
               </div>
             </div>
           </div>
-          <div className="description">
+          <div className="description ">
             <p>{description}</p>
           </div>
           <div className="base-stats">
