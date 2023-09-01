@@ -49,7 +49,7 @@ function PokemonDetail() {
         <div className="pokemon-detail">
           <div className="types">
             {types.map((type) => (
-              <div>
+              <div className={type.toLowerCase()}>
                 <span>{type}</span>
               </div>
             ))}
@@ -69,7 +69,9 @@ function PokemonDetail() {
                 <span className="about-type">Height</span>
               </div>
               <div className="about-div">
-                <span className="about-value">{moves}</span>
+                {moves.map((move) => (
+                  <span className="about-value">{move}</span>
+                ))}
                 <span className="about-type">Moves</span>
               </div>
             </div>
