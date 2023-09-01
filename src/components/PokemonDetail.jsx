@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
 import { Link, useParams } from "react-router-dom";
 
-function PokemonDetail() {
+function PokemonDetail(props) {
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +37,7 @@ function PokemonDetail() {
       <div className="wrapper">
         <header>
           <div className="pokemon-name">
-            <img id="arrow-back" src="./icons/arrow_back.svg" alt="" />
+            <img id="arrow-back" src="" alt="" />
             <h1>{name}</h1>
           </div>
           <div className="id">
@@ -49,7 +49,7 @@ function PokemonDetail() {
         <div className="pokemon-detail">
           <div className="types">
             {types.map((type) => (
-              <div>
+              <div className={type.toLowerCase()}>
                 <span>{type}</span>
               </div>
             ))}
@@ -69,12 +69,14 @@ function PokemonDetail() {
                 <span className="about-type">Height</span>
               </div>
               <div className="about-div">
-                <span className="about-value">{moves}</span>
+                {moves.map((move) => (
+                  <span className="about-value">{move}</span>
+                ))}
                 <span className="about-type">Moves</span>
               </div>
             </div>
           </div>
-          <div className="description">
+          <div className="description ">
             <p>{description}</p>
           </div>
           <div className="base-stats">
