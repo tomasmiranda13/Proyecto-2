@@ -11,6 +11,8 @@ function Home() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [pokemones, setPokemones] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [foundPokemon, setFoundPokemon] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/pokemones")
@@ -38,6 +40,16 @@ function Home() {
     setPokemones(sortedData);
   };
 
+  const handleSearch = (value) => {
+    setSearchTerm(value);
+    const filteredPokemon = pokemones.filter(
+      (pokemon) =>
+        pokemon.name.toLowerCase().includes(value.toLowerCase()) ||
+        (value !== "0" && pokemon.id.includes(value))
+    );
+    console.log(filteredPokemon);
+    setFoundPokemon(filteredPokemon);
+  };
   return (
     <>
       <div className="home-wrapper">
@@ -46,7 +58,7 @@ function Home() {
           <h1>Pokédex</h1>
         </header>
         <div className="flex">
-          <SearchBar/>
+          <SearchBar handleSearch={handleSearch} />
           <ButtonModal
             modalActive={modalActive}
             setModalActive={setModalActive}
@@ -62,10 +74,18 @@ function Home() {
               setModalActive={setModalActive}
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
-              pokemones={pokemones} 
+              pokemones={pokemones}
               onSort={handleSort}
             />
           </div>
+          {foundPokemon.length > 0 &&
+            foundPokemon.map((pokemon) => (
+              <div key={pokemon.id}>
+                <h2>Información del Pokémon</h2>
+                <p>ID: {pokemon.id}</p>
+                <p>Nombre: {pokemon.name}</p>
+              </div>
+            ))}
         </div>
 
         <main className="main-pokecard">

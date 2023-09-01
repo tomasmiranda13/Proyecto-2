@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function PokemonDetail(props) {
   const { id } = useParams();
@@ -33,7 +33,7 @@ function PokemonDetail(props) {
   console.log(pokemon);
   if (!pokemon) return <h1>loading</h1>;
   return (
-    <div className={types[0].toLowerCase()}>
+    <div>
       <div className="wrapper">
         <header>
           <div className="pokemon-name">
