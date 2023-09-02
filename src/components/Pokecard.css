@@ -1,0 +1,49 @@
+.main-pokecard{
+    background-color: #ffffff;
+    padding: 1rem;
+    width: 95%;
+    min-height: 500px;
+    margin: 2rem auto 3% auto;
+    border-radius: 5px;
+    gap: 8px;
+}
+
+.main-pokecard-wrapper{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.pokecard-container{
+    width: 104px;
+    height: 107px;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #FFFFFF 65%, #EFEFEF 35%);
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.20);
+    font-size: 8px;
+    font-weight: 400;
+}
+
+.pokecard-container img{
+  display: flex;
+    justify-self: center;
+    margin: 3% auto 0 auto;
+    width: 64%;
+
+}
+
+.pokecard-container p{
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+
+.pokecard-container p:first-of-type{
+  text-align: right;
+  padding: 4px 8px 0px;
+}
+
+.pokecard-container p:last-of-type{
+  text-align: center;
+  margin: -4px 8px 2px;
+}
