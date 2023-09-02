@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import PokemonDetail from "../components/PokemonDetail";
+import { useParams } from "react-router-dom";
 
 function PokemonPage() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [pokemones, setPokemones] = useState(null);
+  const [pokemon, setPokemon] = useState(null);
+  const { id } = useParams();
+  
   useEffect(() => {
     fetch("http://localhost:3000/pokemones")
       .then((response) => {
+        console.log("esto" + id);
         if (!response.ok) {
           setError(
             "No se han encontrado pokemones o hay algun error, intente recargar la pagina"
@@ -17,7 +21,9 @@ function PokemonPage() {
         }
       })
       .then((data) => {
-        setPokemones(data);
+        const pokemon = data.find((x) => x.id == id);
+        console.log("esto" + pokemon);
+        setPokemon(pokemon);
       })
       .catch((error) => {
         setError("Error del lado del servidor");
@@ -28,12 +34,13 @@ function PokemonPage() {
   }, []);
 
   return (
-    <div>
-      {pokemones &&
-        pokemones.map((pokemon) => {
-          return <PokemonDetail key={pokemon.id} data={pokemon} />;
-        })}
-    </div>
+    <>
+      {pokemon != null ? (
+        <div>
+          <PokemonDetail key={pokemon.id} data={pokemon} />;
+        </div>
+      ) : null}
+    </>
   );
 }
 
