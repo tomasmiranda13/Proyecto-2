@@ -36,7 +36,7 @@ function PokemonDetail(props) {
     <div className={types[0].toLowerCase() +" wrapper"}>
       <header>
         <div className="pokemon-name">
-          <img id="arrow-back" src="" alt="" />
+          <img id="arrow-back" src="../../../icons/arrow_back.svg" alt="" />
           <h1>{name}</h1>
         </div>
         <div className="id">
