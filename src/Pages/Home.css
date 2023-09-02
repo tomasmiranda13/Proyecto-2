@@ -1,6 +1,6 @@
 .home-wrapper {
-    width: 100%;
-    min-height: 1500px;
+    width: 100vw;
+    padding: 0 0 4px 0;
     background-color: #dc0a2d;
   }
   

@@ -1,9 +1,8 @@
 .main-pokecard{
     background-color: #ffffff;
-    padding: 1rem;
-    width: 95%;
-    min-height: 500px;
-    margin: 2rem auto 3% auto;
+    padding: 8px;
+    height: 100vh;
+    margin: 20px 5px 5px 5px;
     border-radius: 5px;
     gap: 8px;
 }
@@ -11,7 +10,8 @@
 .main-pokecard-wrapper{
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 12px;
     gap: 8px;
 }
 
