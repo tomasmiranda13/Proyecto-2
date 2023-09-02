@@ -4,7 +4,8 @@ import Modal from "../components/Modal/Modal";
 import ButtonModal from "../components/Modal/Button";
 import Pokecard from "../components/Pokecard";
 import SearchBar from "../components/Searchbar";
-import "../index.css";
+import "./Home.css";
+
 function Home() {
   const [modalActive, setModalActive] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
