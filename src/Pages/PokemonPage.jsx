@@ -7,6 +7,7 @@ function PokemonPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [pokemon, setPokemon] = useState(null);
   const { id } = useParams();
+  
   useEffect(() => {
     fetch("http://localhost:3000/pokemones")
       .then((response) => {
