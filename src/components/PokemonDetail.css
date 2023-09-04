@@ -161,7 +161,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 3px;
-  padding: 0 10px;
+  padding: 10px;
   font-size: 10px;
   font-weight: 400;
   color: #1d1d1d;
@@ -192,7 +192,14 @@
   background-color: #f9cf30;
   color: #f9cf30;
 }
-/* .electric progress[value]::-moz-progress-bar {
+/* progress {
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-value {
+  background-color: green;
+}
+.electric progress[value]::-moz-progress-bar {
   background-color: #f9cf30;
   color: #f9cf30;
 } */
