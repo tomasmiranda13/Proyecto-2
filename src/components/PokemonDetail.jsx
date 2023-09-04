@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./PokemonDetail.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 function PokemonDetail(props) {
+  const navigate = useNavigate();
+  const handleClick = (event) => {
+    event.preventDefault();
+    navigate("/");
+  };
   const { id } = useParams();
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,7 +41,12 @@ function PokemonDetail(props) {
     <div className={types[0].toLowerCase() + " wrapper"}>
       <header>
         <div className="pokemon-name">
-          <img id="arrow-back" src="../../../icons/arrow_back.svg" alt="" />
+          <img
+            onClick={handleClick}
+            id="arrow-back"
+            src="../../../icons/arrow_back.svg"
+            alt=""
+          />
           <h1>{name}</h1>
         </div>
         <div className="id">
@@ -100,7 +110,7 @@ function PokemonDetail(props) {
                 <progress
                   className="progress-bar"
                   id="file"
-                  max="100"
+                  max="200"
                   value={base_stats.hp}
                 ></progress>
               </span>
@@ -108,7 +118,7 @@ function PokemonDetail(props) {
                 {base_stats.atk}
                 <progress
                   className="progress-bar"
-                  max="100"
+                  max="200"
                   value={base_stats.atk}
                 ></progress>
               </span>
@@ -117,7 +127,7 @@ function PokemonDetail(props) {
                 <progress
                   className="progress-bar"
                   id="file"
-                  max="100"
+                  max="200"
                   value={base_stats.def}
                 ></progress>
               </span>
@@ -126,7 +136,7 @@ function PokemonDetail(props) {
                 <progress
                   className="progress-bar"
                   id="file"
-                  max="100"
+                  max="200"
                   value={base_stats.satk}
                 ></progress>
               </span>
@@ -135,7 +145,7 @@ function PokemonDetail(props) {
                 <progress
                   className="progress-bar"
                   id="file"
-                  max="100"
+                  max="200"
                   value={base_stats.sdef}
                 ></progress>
               </span>
@@ -144,7 +154,7 @@ function PokemonDetail(props) {
                 <progress
                   className="progress-bar"
                   id="file"
-                  max="100"
+                  max="200"
                   value={base_stats.spd}
                 ></progress>
               </span>
