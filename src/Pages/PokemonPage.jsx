@@ -7,7 +7,7 @@ function PokemonPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [pokemon, setPokemon] = useState(null);
   const { id } = useParams();
-  
+
   useEffect(() => {
     fetch("http://localhost:3000/pokemones")
       .then((response) => {
@@ -37,7 +37,7 @@ function PokemonPage() {
     <>
       {pokemon != null ? (
         <div>
-          <PokemonDetail key={pokemon.id} data={pokemon} />;
+          <PokemonDetail key={pokemon.id} data={pokemon} />
         </div>
       ) : null}
     </>

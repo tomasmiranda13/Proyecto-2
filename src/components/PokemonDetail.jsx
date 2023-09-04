@@ -33,18 +33,28 @@ function PokemonDetail(props) {
   console.log(pokemon);
   if (!pokemon) return <h1>loading</h1>;
   return (
-    <div className={types[0].toLowerCase() +" wrapper"}>
+    <div className={types[0].toLowerCase() + " wrapper"}>
       <header>
         <div className="pokemon-name">
           <img id="arrow-back" src="../../../icons/arrow_back.svg" alt="" />
           <h1>{name}</h1>
         </div>
         <div className="id">
-          <img src="./icons/tag.svg" alt="" />
-          <p>{id}</p>
+          <p>#{id}</p>
         </div>
       </header>
-      <img className="pokemon-img" src={image} alt="" />
+      <div className="pokemon-div">
+        <div className="buttons">
+          <button>
+            <img src="../../../icons/chevron_left.svg" alt="" />
+          </button>
+          <img className="bkgnd-img" src="../../../icons/pokeball.svg" alt="" />
+          <img className="pokemon-img" src={image} alt="" />
+          <button>
+            <img src="../../../icons/chevron_right.svg" alt="" />
+          </button>
+        </div>
+      </div>
       <div className="pokemon-detail">
         <div className="types">
           {types.map((type) => (
@@ -57,14 +67,17 @@ function PokemonDetail(props) {
           <h2>About</h2>
           <div className="about">
             <div className="about-div">
-              <span className="about-value">
-                <img src="./icons/weight.svg" alt="" />
-                {weight}
-              </span>
+              <div className="about-span">
+                <img src="../../../icons/weight.svg" alt="" />
+                <span className="about-value">{weight}</span>
+              </div>
               <span className="about-type">Weight</span>
             </div>
             <div className="about-div line">
-              <span className="about-value">{height}</span>
+              <div className="about-span">
+                <img id="ruler" src="../../../icons/straighten.svg" alt="" />
+                <span className="about-value">{height}</span>
+              </div>
               <span className="about-type">Height</span>
             </div>
             <div className="about-div">
@@ -92,16 +105,15 @@ function PokemonDetail(props) {
                 ></progress>
               </span>
               <span>
-                {base_stats.atk}{" "}
+                {base_stats.atk}
                 <progress
                   className="progress-bar"
-                  id="file"
                   max="100"
                   value={base_stats.atk}
                 ></progress>
               </span>
               <span>
-                {base_stats.def}{" "}
+                {base_stats.def}
                 <progress
                   className="progress-bar"
                   id="file"
@@ -110,7 +122,7 @@ function PokemonDetail(props) {
                 ></progress>
               </span>
               <span>
-                {base_stats.satk}{" "}
+                {base_stats.satk}
                 <progress
                   className="progress-bar"
                   id="file"
@@ -119,7 +131,7 @@ function PokemonDetail(props) {
                 ></progress>
               </span>
               <span>
-                {base_stats.sdef}{" "}
+                {base_stats.sdef}
                 <progress
                   className="progress-bar"
                   id="file"
@@ -128,7 +140,7 @@ function PokemonDetail(props) {
                 ></progress>
               </span>
               <span>
-                {base_stats.spd}{" "}
+                {base_stats.spd}
                 <progress
                   className="progress-bar"
                   id="file"
@@ -138,14 +150,14 @@ function PokemonDetail(props) {
               </span>
             </div>
 
-            <div className="stats-name">
-              <span>HP</span>
-              <span>ATK </span>
-              <span>DEF</span>
-              <span>SATK</span>
-              <span>SDEF</span>
-              <span>SPD</span>
-            </div>
+            <ul className="stats-name">
+              <li>HP</li>
+              <li>ATK </li>
+              <li>DEF</li>
+              <li>SATK</li>
+              <li>SDEF</li>
+              <li>SPD</li>
+            </ul>
           </div>
         </div>
       </div>
