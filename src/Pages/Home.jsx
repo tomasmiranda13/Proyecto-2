@@ -79,21 +79,34 @@ function Home() {
               onSort={handleSort}
             />
           </div>
-          {foundPokemon.length > 0 &&
-            foundPokemon.map((pokemon) => (
+          {/* {foundPokemon.length > 0 &&
+            
               <div key={pokemon.id}>
                 <h2>Información del Pokémon</h2>
                 <p>ID: {pokemon.id}</p>
                 <p>Nombre: {pokemon.name}</p>
               </div>
-            ))}
+            ))} */}
         </div>
 
         <main className="main-pokecard">
           <div>
-            {pokemones && (
+            {foundPokemon.length == 0 ? (
               <div className="main-pokecard-wrapper">
                 {pokemones?.map((pokemon, index) => {
+                  return (
+                    <Pokecard
+                      key={index}
+                      id={pokemon.id}
+                      name={pokemon.name}
+                      image={pokemon.image}
+                    />
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="main-pokecard-wrapper">
+                {foundPokemon?.map((pokemon, index) => {
                   return (
                     <Pokecard
                       key={index}
