@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PokemonDetail from "../components/PokemonDetail";
 import { useParams } from "react-router-dom";
 
+
 function PokemonPage() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
