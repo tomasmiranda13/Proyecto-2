@@ -1,0 +1,28 @@
+.wrapper-error {
+    background-image:url(../../public/icons/pikachuErorr.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: 50% 20%;
+}
+
+
+
+
+.wrapper-error a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.wrapper-error a:hover {
+    text-decoration: underline;
+}
+.h1Style{
+    color: red;
+}
