@@ -51,6 +51,14 @@ function Home() {
     console.log(filteredPokemon);
     setFoundPokemon(filteredPokemon);
   };
+
+  const handleOutsideClick = (event) => {
+    console.log(handleOutsideClick);
+    if (event.target === event.currentTarget) {
+      setModalActive(false);
+    }
+  };
+
   return (
     <>
       <div className="home-wrapper">
@@ -69,6 +77,7 @@ function Home() {
           <div
             className="modal-container"
             style={{ visibility: modalActive ? "visible" : "hidden" }}
+            onClick={handleOutsideClick}
           >
             <Modal
               modalActive={modalActive}
@@ -92,7 +101,7 @@ function Home() {
         <main className="main-pokecard">
           <div>
             {foundPokemon.length == 0 ? (
-              <div className="main-pokecard-wrapper">
+              <div className="main-pokecard-wrapper flex-center">
                 {pokemones?.map((pokemon, index) => {
                   return (
                     <Pokecard
@@ -105,7 +114,7 @@ function Home() {
                 })}
               </div>
             ) : (
-              <div className="main-pokecard-wrapper">
+              <div className="main-pokecard-wrapper flex-start">
                 {foundPokemon?.map((pokemon, index) => {
                   return (
                     <Pokecard
