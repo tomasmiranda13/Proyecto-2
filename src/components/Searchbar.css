@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   border: none;
-}
+} 
 
 input {
   background-color: white;
@@ -20,4 +20,11 @@ input {
 }
 input:focus {
   outline: none;
+}
+
+.clear-button{
+  background-color: transparent;
+  border: none;
+  
+
 }
