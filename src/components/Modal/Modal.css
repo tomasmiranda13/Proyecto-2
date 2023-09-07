@@ -2,6 +2,7 @@
     background-color: #FFFFFF ;
     outline: none;
     width: 32px;
+    flex: 0 0;
     height: 32px;
     border: none;
     border-radius: 50%;
