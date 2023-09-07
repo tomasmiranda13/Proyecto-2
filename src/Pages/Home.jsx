@@ -8,7 +8,7 @@ import "./Home.css";
 
 function Home() {
   const [modalActive, setModalActive] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("number");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [pokemones, setPokemones] = useState([]);
@@ -51,6 +51,14 @@ function Home() {
     console.log(filteredPokemon);
     setFoundPokemon(filteredPokemon);
   };
+
+  const handleOutsideClick = (event) => {
+    console.log(handleOutsideClick);
+    if (event.target === event.currentTarget) {
+      setModalActive(false);
+    }
+  };
+
   return (
     <>
       <div className="home-wrapper">
@@ -69,6 +77,7 @@ function Home() {
           <div
             className="modal-container"
             style={{ visibility: modalActive ? "visible" : "hidden" }}
+            onClick={handleOutsideClick}
           >
             <Modal
               modalActive={modalActive}
@@ -79,20 +88,16 @@ function Home() {
               onSort={handleSort}
             />
           </div>
-          {/* {foundPokemon.length > 0 &&
-            
-              <div key={pokemon.id}>
-                <h2>Información del Pokémon</h2>
-                <p>ID: {pokemon.id}</p>
-                <p>Nombre: {pokemon.name}</p>
-              </div>
-            ))} */}
         </div>
 
         <main className="main-pokecard">
           <div>
-            {foundPokemon.length == 0  ?  (
-              <div className="main-pokecard-wrapper">
+
+           
+
+            {foundPokemon.length == 0 ? (
+              <div className="main-pokecard-wrapper flex-center">
+
                 {pokemones?.map((pokemon, index) => {
                   return (
                     <Pokecard
@@ -105,7 +110,7 @@ function Home() {
                 })}
               </div>
             ) : (
-              <div className="main-pokecard-wrapper">
+              <div className="main-pokecard-wrapper flex-start">
                 {foundPokemon?.map((pokemon, index) => {
                   return (
                     <Pokecard
