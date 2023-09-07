@@ -12,7 +12,7 @@ function PokemonPage() {
   useEffect(() => {
     fetch("http://localhost:3000/pokemones")
       .then((response) => {
-        console.log("esto" + id);
+        console.log("pokemon " + id);
         if (!response.ok) {
           setError(
             "No se han encontrado pokemones o hay algun error, intente recargar la pagina"
@@ -23,7 +23,7 @@ function PokemonPage() {
       })
       .then((data) => {
         const pokemon = data.find((x) => x.id == id);
-        console.log("esto" + pokemon);
+        console.log("found poke " + pokemon);
         setPokemon(pokemon);
       })
       .catch((error) => {
