@@ -34,7 +34,7 @@ function PokemonDetail(props) {
       .finally(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, [id]);
   console.log(pokemon);
   if (!pokemon) return <h1>loading</h1>;
   return (
@@ -55,14 +55,18 @@ function PokemonDetail(props) {
       </header>
       <div className="pokemon-div">
         <div className="buttons">
+          <Link to={'/home/pokemon-details/'+ pokemon.previous_id}>
           <button>
             <img src="../../../icons/chevron_left.svg" alt="" />
           </button>
-          <img className="bkgnd-img" src="../../../icons/pokeball.svg" alt="" />
+          </Link>
+          {/* <img className="bkgnd-img" src="../../../icons/pokeball.svg" alt="" /> */}
           <img className="pokemon-img" src={image} alt="" />
+          <Link  to={'/home/pokemon-details/'+ pokemon.next_id}>
           <button>
             <img src="../../../icons/chevron_right.svg" alt="" />
           </button>
+          </Link>
         </div>
       </div>
       <div className="pokemon-detail">

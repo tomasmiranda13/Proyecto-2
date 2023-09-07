@@ -2,6 +2,8 @@
   "pokemones": [
     {
       "id": "001",
+     "previous_id": "304",
+      "next_id":"004",
       "tag": ".icons/tag,svg",
       "name": "Bulbasaur",
       "image": "/images/Bulbasaur.svg",
@@ -22,6 +24,8 @@
     },
     {
       "id": "004",
+      "next_id":"007",
+      "previous_id":"001",
       "name": "Charmander",
       "image": "/images/Charmander.svg",
       "types": ["Fire"],
@@ -41,6 +45,8 @@
     },
     {
       "id": "007",
+      "next_id":"012",
+      "previous_id":"004",
       "name": "Squirtle",
       "image": "/images/Squirtle.svg",
       "types": ["Water"],
@@ -60,6 +66,8 @@
     },
     {
       "id": "012",
+      "next_id":"025",
+      "previous_id":"007",
       "name": "Butterfree",
       "image": "/images/Butterfree.svg",
       "types":[ "Bug", "Flying"],
@@ -79,6 +87,8 @@
     },
     {
       "id": "025",
+      "next_id":"092",
+      "previous_id":"012",
       "name": "Pikachu",
       "image": "/images/Pikachu.svg",
       "types": ["Electric"],
@@ -98,6 +108,8 @@
     },
     {
       "id": "092",
+      "next_id":"132",
+      "previous_id":"025",
       "name": "Gastly",
       "image": "/images/Gastly.svg",
       "types":["Ghost", "Poison"],
@@ -117,6 +129,8 @@
     },
     {
       "id": "132",
+      "next_id":"152",
+      "previous_id":"092",
       "name": "Ditto",
       "image": "/images/Ditto.svg",
       "types": ["Normal"],
@@ -136,6 +150,8 @@
     },
     {
       "id": "152",
+      "next_id":"304",
+      "previous_id":"132",
       "name": "Mew",
       "image": "/images/Mew.svg",
       "types": ["Psychic"],
@@ -155,6 +171,8 @@
     },
     {
       "id": "304",
+      "next_id":"001",
+      "previous_id":"152",
       "name": "Aron",
       "image": "/images/Aron.svg",
       "types":[ "Steel", "Rock"],
