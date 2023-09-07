@@ -8,7 +8,7 @@ import "./Home.css";
 
 function Home() {
   const [modalActive, setModalActive] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("number");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [pokemones, setPokemones] = useState([]);
@@ -88,14 +88,6 @@ function Home() {
               onSort={handleSort}
             />
           </div>
-          {/* {foundPokemon.length > 0 &&
-            
-              <div key={pokemon.id}>
-                <h2>Información del Pokémon</h2>
-                <p>ID: {pokemon.id}</p>
-                <p>Nombre: {pokemon.name}</p>
-              </div>
-            ))} */}
         </div>
 
         <main className="main-pokecard">
