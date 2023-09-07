@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 5px;
+  min-height: 100vh;
 }
 .id {
   font-size: 12px;
@@ -9,11 +10,11 @@
 .bkgnd-img {
   z-index: 1;
   position: absolute;
-  width: 225px;
+  width: 200px;
   filter: invert(1);
   opacity: 25%;
-  bottom: 100px;
-  left: 135px;
+  bottom: 60px;
+  left: 160px;
   overflow: hidden;
 }
 .wrapper header {
@@ -29,13 +30,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 12px 0px 20px;
 }
 #arrow-back {
   width: 32px;
 }
 .pokemon-div {
   position: relative;
-  top: 80px;
+  margin-bottom: -56px;
 }
 .buttons {
   display: flex;
@@ -48,23 +50,23 @@
 }
 .pokemon-img {
   position: relative;
-
   /* top: 90px; */
-  width: 230px;
+  width: 200px;
   z-index: 30;
 }
 .types {
   display: flex;
   gap: 20px;
-  margin-top: 60px;
+  margin-top: 56px;
 }
 .types div {
   border-radius: 50px;
-  padding: 4px 8px;
+  padding: 2px 8px;
   color: white;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
 }
+
 .pokemon-detail {
   display: flex;
   flex-direction: column;
@@ -74,7 +76,7 @@
   background-color: var(--grayscale-background, #efefef);
   margin: 2px;
   border-radius: 10px;
-  padding: 20px 10px;
+  padding: 0px 20px 20px;
   box-shadow: inset 0px 2px 3px rgba(37, 36, 36, 0.274);
 }
 .pokemon-detail h2 {
@@ -161,7 +163,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 3px;
-  padding: 10px;
+  padding: 0 10px;
   font-size: 10px;
   font-weight: 400;
   color: #1d1d1d;
@@ -172,9 +174,13 @@
 .progress-bar {
   margin-left: 4px;
   width: 220px;
-  /* height: 7px;
+  height: 4px;
   border-radius: 25px;
-  background-color: white; */
+  border: none;
+}
+.flex-value {
+  display: flex;
+  align-items: flex-start;
 }
 
 .id {
@@ -184,48 +190,133 @@
   text-align: center;
   font-weight: 700;
 }
-.id img {
-  width: 14px;
-  filter: invert(1);
-}
+
 .electric {
   background-color: #f9cf30;
   color: #f9cf30;
 }
-/* progress {
-  -webkit-appearance: none;
+.electric progress {
+  background-color: #f9cd3048;
 }
 
-::-webkit-progress-value {
-  background-color: green;
+.electric ::-webkit-progress-value {
+  background-color: #f9cf30;
 }
+.electric ::-webkit-progress-bar {
+  background-color: #f9cd3048;
+}
+
 .electric progress[value]::-moz-progress-bar {
   background-color: #f9cf30;
   color: #f9cf30;
-} */
+}
 .fire {
   background-color: #f57d31;
   color: #f57d31;
+}
+.fire progress {
+  background-color: #f57c3160;
+}
+
+.fire ::-webkit-progress-value {
+  background-color: #f57d31;
+}
+.fire ::-webkit-progress-bar {
+  background-color: #f57c3152;
+}
+
+.fire progress[value]::-moz-progress-bar {
+  background-color: #f57c31;
 }
 .water {
   background-color: #6493eb;
   color: #6493eb;
 }
+.water progress {
+  background-color: #6493eb56;
+}
+
+.water ::-webkit-progress-value {
+  background-color: #6493eb;
+}
+.water ::-webkit-progress-bar {
+  background-color: #6493eb59;
+}
+
+.water progress[value]::-moz-progress-bar {
+  background-color: #6493eb;
+}
 .bug {
   background-color: #a7b723;
   color: #a7b723;
+}
+.bug progress {
+  background-color: #a8b72356;
+}
+
+.bug ::-webkit-progress-value {
+  background-color: #a7b723;
+}
+.bug ::-webkit-progress-bar {
+  background-color: #a8b72357;
+}
+
+.bug progress[value]::-moz-progress-bar {
+  background-color: #a7b723;
 }
 .grass {
   background-color: #74cb48;
   color: #74cb48;
 }
+.grass progress {
+  background-color: #74cb4863;
+}
+
+.grass ::-webkit-progress-value {
+  background-color: #74cb48;
+}
+.grass ::-webkit-progress-bar {
+  background-color: #74cb4856;
+}
+
+.grass progress[value]::-moz-progress-bar {
+  background-color: #74cb48;
+}
 .normal {
   background-color: #aaa67f;
   color: #aaa67f;
 }
+.normal progress {
+  background-color: #aaa67f52;
+}
+
+.normal ::-webkit-progress-value {
+  background-color: #aaa67f;
+}
+.normal ::-webkit-progress-bar {
+  background-color: #aaa67f56;
+}
+
+.normal progress[value]::-moz-progress-bar {
+  background-color: #aaa67f;
+}
 .fighting {
   background-color: #c12239;
   color: #c12239;
+}
+.fighting progress {
+  background-color: #c1223a5d;
+}
+
+.fighting ::-webkit-progress-value {
+  background-color: #c12239;
+}
+.fighting ::-webkit-progress-bar {
+  background-color: #c1223a57;
+}
+
+.fighting progress[value]::-moz-progress-bar {
+  background-color: #c12239;
 }
 .flying {
   background-color: #a891ec;
@@ -247,13 +338,55 @@
   background-color: #70559b;
   color: #70559b;
 }
+.ghost progress {
+  background-color: #70559b4b;
+}
+
+.ghost ::-webkit-progress-value {
+  background-color: #70559b;
+}
+.ghost ::-webkit-progress-bar {
+  background-color: #70559b49;
+}
+
+.ghost progress[value]::-moz-progress-bar {
+  background-color: #70559b;
+}
 .steel {
   background-color: #b7b9d0;
   color: #b7b9d0;
 }
-.physic {
+.steel progress {
+  background-color: #b7b9d04f;
+}
+
+.steel ::-webkit-progress-value {
+  background-color: #b7b9d0;
+}
+.steel ::-webkit-progress-bar {
+  background-color: #b7b9d05d;
+}
+
+.steel progress[value]::-moz-progress-bar {
+  background-color: #b7b9d0;
+}
+.psychic {
   background-color: #fb5584;
   color: #fb5584;
+}
+.psychic progress {
+  background-color: #fb558459;
+}
+
+.psychic ::-webkit-progress-value {
+  background-color: #fb5584;
+}
+.psychic ::-webkit-progress-bar {
+  background-color: #fb55844b;
+}
+
+.psychic progress[value]::-moz-progress-bar {
+  background-color: #fb5584;
 }
 .ice {
   background-color: #9ad6df;
