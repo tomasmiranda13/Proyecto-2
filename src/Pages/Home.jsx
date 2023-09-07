@@ -3,7 +3,7 @@ import Logo from "../../public/icons/pokeball.svg";
 import Modal from "../components/Modal/Modal";
 import ButtonModal from "../components/Modal/Button";
 import Pokecard from "../components/Pokecard";
-import SearchBar from "../components/Searchbar";
+import SearchBar  from "../components/Searchbar";
 import "./Home.css";
 
 function Home() {
@@ -67,7 +67,7 @@ function Home() {
           <h1>Pokédex</h1>
         </header>
         <div className="flex">
-          <SearchBar handleSearch={handleSearch} />
+          <SearchBar handleSearch={handleSearch} resetPokemon={setFoundPokemon} />
           <ButtonModal
             modalActive={modalActive}
             setModalActive={setModalActive}
@@ -92,8 +92,12 @@ function Home() {
 
         <main className="main-pokecard">
           <div>
+
+           
+
             {foundPokemon.length == 0 ? (
               <div className="main-pokecard-wrapper flex-center">
+
                 {pokemones?.map((pokemon, index) => {
                   return (
                     <Pokecard

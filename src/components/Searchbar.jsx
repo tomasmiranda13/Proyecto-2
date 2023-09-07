@@ -1,16 +1,25 @@
 import React, { useState } from "react";
+import {useNavigate } from "react-router-dom";
 import "./SearchBar.css";
 import { AiOutlineSearch } from "react-icons/ai#AiOutlineSearch";
 import { RxCross1 } from "react-icons/rx";
-function SearchBar({ handleSearch }) {
+function SearchBar({ handleSearch , resetPokemon }) {
   const [searchTerm, setSearchTerm] = useState("");
+
+  
+
+  
 
   const handleSearchChange = (value) => {
     setSearchTerm(value);
     handleSearch(value);
   };
-  const handleClearButton = () => {
+  const handleClearButton = (event)  => {
     setSearchTerm("");
+    resetPokemon([])
+
+   
+
   };
 
   return (
