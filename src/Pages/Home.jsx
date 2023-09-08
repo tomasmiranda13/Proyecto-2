@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../../public/icons/pokeball.svg";
+import Logo from "../../public/icons/pokeballlogo.svg";
 import Modal from "../components/Modal/Modal";
 import ButtonModal from "../components/Modal/Button";
 import Pokecard from "../components/Pokecard";
